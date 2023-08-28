@@ -8,6 +8,22 @@ export class Question {
     this.question = question
     this.correctAnswer = correct_answer
     this.incorrectAnswers = incorrect_answers || []
+    // this.allAnswers = answer[{ correct_answer }, { incorrect_answers }]  //NOTE: this won't work because the last passed argument is used up by this.incorrectAnswers. So basically it's trying to define it to nothing. Savannah's suggestion is to make a getter in my model.
+  }
+
+
+
+  get randomizeAnswers() {
+
+    let answer = [this.correctAnswer, this.incorrectAnswers]
+
+    console.log('before sort:', answer)
+
+    let sortedAnswer = answer.sort()
+
+    console.log('after sort:', answer)
+
+    return sortedAnswer
   }
 
 

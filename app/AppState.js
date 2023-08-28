@@ -14,21 +14,6 @@ class ObservableAppState extends EventEmitter {
   questions = []
 
 
-
-
-  /*
-  API links:
-
-    video game questions: https://opentdb.com/api.php?amount=4&category=15
-  
-    vehicle questions: https://opentdb.com/api.php?amount=4&category=28
-  
-  */
-
-
-
-
-
   page = ''
 
   /** @type {import('./models/Value.js').Value[]} */
