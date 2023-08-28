@@ -12,18 +12,18 @@ export class Question {
   }
 
 
-
+  // FIXME: this is not working, I can't even get the console logs from it
   get randomizeAnswers() {
 
-    let answer = [this.correctAnswer, this.incorrectAnswers]
+    let answer = [this.correctAnswer, this.incorrectAnswers[0], this.incorrectAnswers[1], this.incorrectAnswers[2]]
 
-    console.log('before sort:', answer)
+    // console.log('before sort:', answer)
 
-    let sortedAnswer = answer.sort()
+    let randomAnswers = answer.sort()
 
-    console.log('after sort:', answer)
+    // console.log('after sort:', answer)
 
-    return sortedAnswer
+    return randomAnswers
   }
 
 
@@ -45,10 +45,10 @@ export class Question {
       </div>
 
       <div class="row justify-content-around">
-        <button class="col-5 btn btn-info m-1">${this.correctAnswer}</button>
-        <button class="col-5 btn btn-info m-1">${this.incorrectAnswers[0]}</button>
-        <button class="col-5 btn btn-info m-1">${this.incorrectAnswers[1]}</button>
-        <button class="col-5 btn btn-info m-1">${this.incorrectAnswers[2]}</button>
+        <button class="col-5 btn btn-info m-1">${this.randomizeAnswers[0]}</button>
+        <button class="col-5 btn btn-info m-1">${this.randomizeAnswers[1]}</button>
+        <button class="col-5 btn btn-info m-1">${this.randomizeAnswers[2]}</button>
+        <button class="col-5 btn btn-info m-1">${this.randomizeAnswers[3]}</button>
       </div>
 
     </section>

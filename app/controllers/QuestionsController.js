@@ -4,7 +4,7 @@ import { setHTML } from "../utils/Writer.js"
 
 
 function _drawQuestions() {
-  console.log('drawing my questions')
+  // console.log('drawing my questions')
 
   let content = ''
 
@@ -23,7 +23,7 @@ function _drawQuestions() {
 
 export class QuestionsController {
   constructor() {
-    console.log('controller stuff yo')
+    // console.log('controller stuff yo')
 
     //TODO: setting initial screen to the animals question set since it's the first button, that makes sense me thinks
 
@@ -35,7 +35,7 @@ export class QuestionsController {
 
     let url = ''
 
-    console.log(questionType)
+    // console.log(questionType)
 
     if (questionType == 'animals') {
       url = 'https://opentdb.com/api.php?amount=4&category=27&type=multiple'
@@ -45,7 +45,7 @@ export class QuestionsController {
       url = 'https://opentdb.com/api.php?amount=4&category=28'
     }
 
-    console.log('url is:', url)
+    // console.log('url is:', url)
 
     await questionsService.getQuestions(url)
   }
