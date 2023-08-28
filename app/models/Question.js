@@ -16,18 +16,23 @@ export class Question {
   get QuestionsTemplate() {
     return `
     
-    <section class="container-fluid card">
+    <section class="container-fluid question-card">
       <div class="row">
-        <h3 class="col-4">${this.category}</h3>
-        <h3 class="col-4">${this.type}</h3>
-        <h3 class="col-4">${this.difficulty}</h3>
+        <h3 class="col-4">Category: ${this.category}</h3>
+        <h3 class="col-4">Question Type: ${this.type}</h3>
+        <h3 class="col-4">Question Difficulty: ${this.difficulty}</h3>
       </div>
       <div class="row">
-        <p class="col-6">${this.question}</p>
-        <p class="col-6">${this.correctAnswer}</p>
+        <p class="col-6">
+          <h3>Question: </h3>
+        ${this.question}</p>
       </div>
-      <div class="row">
-        <p>${this.incorrectAnswers}</p>
+
+      <div class="row justify-content-around">
+        <button class="col-5 btn btn-info m-1">${this.correctAnswer}</button>
+        <button class="col-5 btn btn-info m-1">${this.incorrectAnswers[0]}</button>
+        <button class="col-5 btn btn-info m-1">${this.incorrectAnswers[1]}</button>
+        <button class="col-5 btn btn-info m-1">${this.incorrectAnswers[2]}</button>
       </div>
 
     </section>

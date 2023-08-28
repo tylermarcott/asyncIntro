@@ -11,9 +11,20 @@ export const router = [
     controller: QuestionsController,
     view: /*html*/`
     
-    <div id="questions"></div>
-    
+    <section class="row justify-content-around">
+      <div class="col-3 m-1 text-center">
+        <button class="btn btn-info" onclick="app.QuestionsController.getQuestions('animals')">Animal Questions</button>
+      </div>
+      <div class="col-3 m-1 text-center">
+        <button class="btn btn-info" onclick="app.QuestionsController.getQuestions('videoGames')">Video Game Questions</button>
+      </div>
+      <div class="col-3 m-1 text-center">
+        <button class="btn btn-info" onclick="app.QuestionsController.getQuestions('vehicles')">Vehicles Questions</button>
+      </div>
+    </section>
 
+
+    <div id="questions"></div>
     `
   },
   {

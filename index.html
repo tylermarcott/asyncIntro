@@ -40,23 +40,42 @@
 
     <!-- PRIMARY VIEWPORT -->
 
+
+    <!-- STUB: group of buttons that changes back and forth between different question sets. -->
+
+    <section class="row">
+      <div class="col-4">
+        <button class="btn btn-info"></button>
+      </div>
+      <div class="col-4">
+        <button class="btn btn-info"></button>
+      </div>
+      <div class="col-4">
+        <button class="btn btn-info"></button>
+      </div>
+    </section>
+
+
+
     <!-- STUB: question card stub -->
 
-    <section class="container-fluid card">
+    <section class="container-fluid card question-card">
       <div class="row">
-        <h3 class="col-4">Category</h3>
-        <h3 class="col-4">Type</h3>
-        <h3 class="col-4">Difficulty</h3>
+        <h3 class="col-4">${this.category}</h3>
+        <h3 class="col-4">${this.type}</h3>
+        <h3 class="col-4">${this.difficulty}</h3>
       </div>
       <div class="row">
-        <p class="col-6">Question</p>
-        <p class="col-6">Answer</p>
+        <p class="col-6">${this.question}</p>
+        <p class="col-6">${this.correctAnswer}</p>
       </div>
       <div class="row">
-        <p>Wrong answers</p>
+        <p>${this.incorrectAnswers}</p>
       </div>
 
     </section>
+
+
 
 
 

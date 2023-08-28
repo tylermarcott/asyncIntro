@@ -3,10 +3,10 @@ import { Question } from "../models/Question.js"
 
 class QuestionsService {
 
-  async getQuestions() {
-    console.log('getting questions')
+  async getQuestions(url) {
+    console.log('the passed url is:', url)
 
-    const response = await fetch('https://opentdb.com/api.php?amount=4&category=27&type=multiple')
+    const response = await fetch(url)
     const data = await response.json()    //NOTE: I think this converts the raw data from JSON?
 
     console.log(data) //this gives us an array filled with 4 class instances with our question objects inside.
