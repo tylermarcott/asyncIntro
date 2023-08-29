@@ -12,7 +12,7 @@ export class Question {
   }
 
 
-  // FIXME: this is not working, I can't even get the console logs from it
+
   get randomizeAnswers() {
 
     let answer = [this.correctAnswer, this.incorrectAnswers[0], this.incorrectAnswers[1], this.incorrectAnswers[2]]
@@ -45,10 +45,10 @@ export class Question {
       </div>
 
       <div class="row justify-content-around">
-        <button class="col-5 btn btn-info m-1">${this.randomizeAnswers[0]}</button>
-        <button class="col-5 btn btn-info m-1">${this.randomizeAnswers[1]}</button>
-        <button class="col-5 btn btn-info m-1">${this.randomizeAnswers[2]}</button>
-        <button class="col-5 btn btn-info m-1">${this.randomizeAnswers[3]}</button>
+        <button onclick="app.QuestionsController.checkAnswer('${this.randomizeAnswers[0]}')" class="col-5 btn btn-info m-1">${this.randomizeAnswers[0]}</button>
+        <button onclick="app.QuestionsController.checkAnswer('${this.randomizeAnswers[1]}')" class="col-5 btn btn-info m-1">${this.randomizeAnswers[1]}</button>
+        <button onclick="app.QuestionsController.checkAnswer('${this.randomizeAnswers[2]}')" class="col-5 btn btn-info m-1">${this.randomizeAnswers[2]}</button>
+        <button onclick="app.QuestionsController.checkAnswer('${this.randomizeAnswers[3]}')" class="col-5 btn btn-info m-1">${this.randomizeAnswers[3]}</button>
       </div>
 
     </section>

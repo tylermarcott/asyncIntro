@@ -53,6 +53,15 @@ export class QuestionsController {
 
 
 
+  checkAnswer(answer) {
+    console.log('the following answer was chosen by user:', answer)
+  }
+
+
+
+
+  // TODO: ok next, I want to let the user be able to click on a question and have it console log whether the answer is correct or not.
+
 
 
 
